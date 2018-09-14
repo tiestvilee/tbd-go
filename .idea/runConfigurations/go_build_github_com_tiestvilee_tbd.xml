@@ -3,7 +3,7 @@
     <module name="tbd" />
     <working_directory value="$PROJECT_DIR$/" />
     <go_parameters value="-i" />
-    <parameters value="snapshot -d &quot;this is the message&quot;" />
+    <parameters value="integrate -d &quot;this is the message&quot;" />
     <kind value="PACKAGE" />
     <filePath value="$PROJECT_DIR$/" />
     <package value="github.com/tiestvilee/tbd" />
