@@ -25,15 +25,17 @@ run build
 push
 
 */
-func integrate() error {
-	var status, err = git_status()
+func integrate(path string) error {
+	var status, err = git_status(path)
 	if err != nil {
 		return err
 	}
 
-	if len(status.uncommittedFiles) != 0 {
+	if !status.isClean {
 		return fmt.Errorf("uncommitted files. Take a snapshot before integrating")
 	}
+
+	fmt.Print("integrated!!!")
 
 	return nil
 }
